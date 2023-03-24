@@ -1,5 +1,5 @@
 <template>
     <div>
-        This is a help popup   
+        This is the help popup content
     </div>
 </template>
