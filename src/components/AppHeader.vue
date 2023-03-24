@@ -1,9 +1,9 @@
 <template>
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">{{props.appName}}</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">{{ companyName }}</a>
         <div class="navbar-nav navbar-right">
             <div class="nav-item text-nowrap">
-                <router-link to="/profile" class="nav-link px-3">{{ username }}</router-link>
+                <router-link to="/profile" class="nav-link px-3">{{ userName }}</router-link>
             </div>
             <div class="nav-item text-nowrap">
                 <a class="nav-link px-3" href="#">Sign out</a>
@@ -25,14 +25,14 @@
   import AppHelp from './AppHelp.vue';
   import { ref, defineProps } from 'vue';
 
-  const username = ref('User Full Name')
-  const props = defineProps({
-    appName: { type: String, required: true },
+  defineProps({
+    companyName: { type: String, required: true },
+    userName: { type: String, required: true }
   })
 
   const thisModal= ref();
-  function showModal(){
-  thisModal.value.show();
+  function showModal() {
+    thisModal.value.show();
   }
 </script>
 
