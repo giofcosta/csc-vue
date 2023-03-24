@@ -1,6 +1,3 @@
-
-import { useLink } from 'vue-router';
-
 <template>
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">{{props.appName}}</a>
@@ -16,28 +13,27 @@ import { useLink } from 'vue-router';
             </div>
         </div>
     </header>
-    <AppModal title="Model title goes here" ref="thisModal">
-        <template #body>This should be in the body</template>
-        <template #footer>
-        <button class="btn btn-primary">Extra footer button</button>
+    <AppModal title="Help title" ref="thisModal">
+        <template #body>
+          <AppHelp /> 
         </template>
     </AppModal>
 </template>
 
 <script setup="" lang="ts">
-import AppModal from './AppModal.vue';
-import { ref, defineProps } from 'vue';
+  import AppModal from './AppModal.vue';
+  import AppHelp from './AppHelp.vue';
+  import { ref, defineProps } from 'vue';
 
-const username = ref('User Full Name')
-const props = defineProps({
-  appName: { type: String, required: true },
-})
+  const username = ref('User Full Name')
+  const props = defineProps({
+    appName: { type: String, required: true },
+  })
 
-const thisModal= ref();
-function showModal(){
- thisModal.value.show();
-}
-
+  const thisModal= ref();
+  function showModal(){
+  thisModal.value.show();
+  }
 </script>
 
 <style lang="scss">
