@@ -1,12 +1,11 @@
 import { Bank }  from '../../models/bank';
 import { defineStore } from "pinia";
 import { api } from "@/http/api";
-import { useStorage } from '@vueuse/core'
 
 export const useBankStore = defineStore("bank", {
     state: () =>
     ({
-        bank: useStorage<Bank>('bank', null),
+        bank: {} as Bank,
     }),
     actions: {
         async getBank() {
@@ -17,4 +16,5 @@ export const useBankStore = defineStore("bank", {
             } );
         },
     },
+    persist: true,
 });
