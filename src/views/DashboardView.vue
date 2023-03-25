@@ -36,6 +36,9 @@
       <div class="col col-md-6">
         <AddressWidget />
       </div>
+      <div class="col col-md-6">
+        <NoteWidget />
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +46,7 @@
 <script setup lang="ts">
 import AddressWidget from '@/components/AddressWidget.vue';
 import BankWidget from '@/components/BankWidget.vue';
+import NoteWidget from '@/components/NoteWidget.vue';
 
 import { useCompanyStore } from '@/store/modules/company';
 import { useFoodStore } from '@/store/modules/food';
