@@ -34,10 +34,6 @@ import { useUserStore } from './store/modules/user';
     companyStore.getCompany()
     userStore.getUser()
   });
-
-  
-  
-  
 </script>
 
 <style lang="scss">
