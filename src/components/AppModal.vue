@@ -1,26 +1,6 @@
-<script setup lang="ts">
-import { onMounted, ref, defineProps, defineExpose } from "vue";
-import { Modal } from "bootstrap";
-defineProps({
-  title: {
-    type: String,
-    default: "<<Title goes here>>",
-  },
-});
-
-let modalEle = ref(null);
-let thisModalObj: Modal | null = null;
-
-onMounted(() => thisModalObj = new Modal(modalEle.value ?? 'exampleModal'));
-function _show() {
-  thisModalObj?.show();
-}
-defineExpose({ show: _show });
-</script>
 
 <template>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby=""
-    aria-hidden="true" ref="modalEle">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="" aria-hidden="true" ref="modalEle">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -40,3 +20,23 @@ defineExpose({ show: _show });
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, ref, defineProps, defineExpose } from "vue";
+import { Modal } from "bootstrap";
+defineProps({
+  title: {
+    type: String,
+    default: "<<Title goes here>>",
+  },
+});
+
+let modalEle = ref(null);
+let thisModalObj: Modal | null = null;
+
+onMounted(() => thisModalObj = new Modal(modalEle.value ?? 'exampleModal'));
+function _show() {
+  thisModalObj?.show();
+}
+defineExpose({ show: _show });
+</script>

@@ -12,7 +12,7 @@ export interface User {
     social_insurance_number: string
     date_of_birth: string
     employment: Employment
-    address: Address
+    address: UserAddress
     credit_card: CreditCard
     subscription: Subscription
   }
@@ -22,7 +22,7 @@ export interface User {
     key_skill: string
   }
   
-  export interface Address {
+  export interface UserAddress {
     city: string
     street_name: string
     street_address: string
