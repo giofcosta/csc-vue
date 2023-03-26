@@ -1,5 +1,4 @@
 <template>
-    
     <BankForm />
 </template>
 
