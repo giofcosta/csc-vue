@@ -1,13 +1,7 @@
 <template>
-    <div>
-        
-    </div>
+    <BankForm />
 </template>
 
 <script setup lang="ts">
-import { useBankStore } from '@/store/modules/bank';
-import { storeToRefs } from 'pinia';
-
-    const bankStore = useBankStore();
-  const { bank } = storeToRefs(bankStore);
+import BankForm from '@/components/BankForm.vue';
 </script>
